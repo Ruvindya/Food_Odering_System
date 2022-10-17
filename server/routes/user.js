@@ -33,7 +33,7 @@ router.post("/newUser", (request,response)=>{
            console.log(err);
            response.send(err);
        }else{
-        response.send("Values inserted");
+        response.send("User details inserted");
        }
    });
 });
