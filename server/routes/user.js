@@ -14,8 +14,10 @@ router.get("/details",async (request, response) => {
         });
 });
 
+
+
 //getting data from user and inserting to table
-router.post("/newUser", async (request, response) => {
+router.post("/newUser", (request,response)=>{
 
     const userID = request.body.userID;
     const name = request.body.name;
@@ -33,10 +35,7 @@ router.post("/newUser", async (request, response) => {
        }else{
         response.send("Values inserted");
        }
-   }
-   );
-
-
+   });
 });
 
 
