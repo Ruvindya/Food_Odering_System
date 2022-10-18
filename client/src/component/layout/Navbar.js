@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
 
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark ">
-  <a className="navbar-brand" href="#">E School</a>
+  <a className="navbar-brand" href="#">PICKMeal</a>
 
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
@@ -19,7 +19,7 @@ const Navbar = () => {
       </li>
 
       <li className="nav-item">
-        <a className="nav-link" href="#">FAQs</a>
+        <a className="nav-link" href="#">Menu</a>
       </li>
 
       {/* <li className="nav-item">
@@ -27,23 +27,23 @@ const Navbar = () => {
       </li> */}
 
       <li className="nav-item">
-        <a className="nav-link" href="#">Register As a Student</a>
+        <a className="nav-link" href="#">Place Oder</a>
       </li>
 
     
 
       <li className="nav-item dropdown">
         <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          You
         </a>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
 
-          <a className="dropdown-item" href="/user">My Profile</a>
-          <a className="dropdown-item" href="#">User Profile</a>
+          <a className="dropdown-item" href="/user">Your Order</a>
+          <a className="dropdown-item" href="#">Your Details</a>
 
 
           <div className="dropdown-divider"></div>
-          <a className="dropdown-item" href="#">Logout</a>
+          <a className="dropdown-item" href="#">New Order</a>
         </div>   
       </li>
      

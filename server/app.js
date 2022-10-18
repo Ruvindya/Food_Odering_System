@@ -5,6 +5,9 @@ const app = express();
 const userRouter = require('./routes/user');
 app.use("/user",userRouter);
 
+//const userRouter = require('./routes/customer');
+//app.use("/customer",userRouter);
+
 
 
 app.listen(3001, () => {
