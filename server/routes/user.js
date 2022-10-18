@@ -19,7 +19,7 @@ router.get("/details",async (request, response) => {
 
 //getting data from New user and inserting to table
 
-router.post("/store", (req,res) => {
+router.post("/register", (req,res) => {
     //console.log(req.body);
     const {userID, name, email, userName, password} = req.body;
 
