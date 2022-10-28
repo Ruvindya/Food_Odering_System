@@ -4,53 +4,49 @@ import {useState } from "react";
 import "../../App.css";
 import { v4 as uuid } from 'uuid';
 
+
+//aluthen ekkenekva reg vena eka livva.. veda karana hati baluve na thama
 function RegUser() {
 
   
-  const [name, setname] = useState('');
-  const [email, setemail] = useState('');
-  const [userName, setuserName] = useState('');
-  const [password, setPassword] = useState('');
+  const [userId, setuserId] = useState("");
+  const [email, setemail] = useState("");
+  const [userName, setuserName] = useState("");
+  const [password, setPassword] = useState("");
 
 
-  const RegUser =  (e) => {
+  const Register =  (e) => {
     e.preventDefault();
 
-    console.log(name)
+    console.log(userId)
 
-    var err = false;
 
     const newUser = {  
-      userID: uuid(),
-      name: name,
-      email: email,
+      userId: uuid(),
       userName: userName,
+      email: email,
       password: password
     }
     
     try {
-         axios.post('http://localhost:3001/user/register', newUser);    
+         axios.post('http://localhost:3001/user/register',newUser);    
 
     } catch (error) {
 
    console.log(error);
-
-             err = true;
-
           
     }
           
-  
-    setname("");
-    setemail("");
-    setuserName("");
-    setPassword("");
- 
+    setuserId(" ");
+    setemail(" ");
+    setuserName(" ");
+    setPassword(" ");
+
 }
   
   return (
    
-  <form   onSubmit={RegUser} >
+  <form   onSubmit={Register} >
 
     <div className="header-wraper">
       <div className="Registration" >
@@ -59,9 +55,9 @@ function RegUser() {
                 <div className="form-group"></div>
 
                 
-                 <label>First Name</label>
-                <input type="text" placeholder="ex:Name"  name="Name" required  
-                value={name}  onChange={(e) => setname(e.target.value)} 
+                 <label>User Name</label>
+                <input type="text" placeholder="ex:userName"  name="userName" required  
+                value={userName}  onChange={(e) => setuserName(e.target.value)} 
                 />
                 
                

@@ -6,14 +6,14 @@ import { v4 as uuid } from 'uuid';
 
 function CusDetails() {
 
-  
+  //customer able ekata adalava meya venas karanna
   const [name, setname] = useState('');
   const [email, setemail] = useState('');
   const [userName, setuserName] = useState('');
   const [password, setPassword] = useState('');
 
 
-  const RegUser =  (e) => {
+  const CusDetails =  (e) => {
     e.preventDefault();
 
     console.log(name)

@@ -1,6 +1,12 @@
-const express = require('express')
-const router = express.Router()
-const con = require("../connection")
+const express = require('express');
+const router = express.Router();
+const con = require("../connection");
+
+const app = express();
+const path = require('path');
+
+
+
 
 
 //get details from user table for logging
@@ -15,18 +21,14 @@ router.get("/details",async (request, response) => {
         });
 });
 
-
-
 //getting data from New user and inserting to table
 
-router.post("/register", (req,res) => {
-    //console.log(req.body);
-    const {userID, name, email, userName, password} = req.body;
+router.post("/register",(req,res) => {
 
-    console.log(userID);
+    const {userId, userName, email, password} = req.body;
 
-   const query = "Insert Into file(userID, name, email, userName, password)) Values(?,?,?,?,?)";
-    con.query(query, [userID,name,email,userName,password], (err, result) => {
+   const query = "Insert Into file(userId, userName, email, password)) Values(?,?,?,?)";
+    con.query(query, [userId, userName, email, password], (err, result) => {
       if (err) {
         console.log(err);
         res.status(500).send({ msg:'SERVER_ERROR' });
@@ -43,7 +45,6 @@ router.post("/register", (req,res) => {
 //     const userName = request.body.userName;
 //     const password = request.body.password;
 
-
 //     connection.query("INSERT INTO user (userID,name,email,userName,password) VALUES (?,?,?,?,?)", 
 //     [userID,name,email,userName,password],
 //    (err, result) => {
@@ -55,7 +56,6 @@ router.post("/register", (req,res) => {
 //        }
 //    });
 // });
-
 
 
 module.exports = router

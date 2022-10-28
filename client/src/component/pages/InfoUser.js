@@ -16,7 +16,7 @@ const InfoUser = () => {
   //       console.log(await response.data);
   //       setuserNames(await  response.data);
   //     })
-  // },[]);
+  // },[]);***
 
   useEffect(() => {
     const fetchData = async () =>{
